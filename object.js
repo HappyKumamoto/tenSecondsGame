@@ -6,6 +6,7 @@ function start(){
                                    //関数を上書きして、定義した処理が行われるようにした
                                    //ここでのstopは、関数ではなく、ただの値を代入している
                                    //関数という値をonkeydownに代入
+    document.body.touchstart = stop;
 }
 function stop() {
     let currentTime = Date.now();
