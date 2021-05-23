@@ -2,7 +2,7 @@ let startTime = null;//startTime変数
 let displayArea = document.getElementById('display-area');
 function start(){
     startTime = Date.now();//上で用意した変数startTimeへ現在時刻のミリ秒を代入
-    document.body.onclick = stop;//何かキーが押された時、onkeydown関数を実行してくれる
+    document.body.onkeydown = stop;//何かキーが押された時、onkeydown関数を実行してくれる
                                    //関数を上書きして、定義した処理が行われるようにした
                                    //ここでのstopは、関数ではなく、ただの値を代入している
                                    //関数という値をonkeydownに代入
@@ -15,9 +15,9 @@ function stop() {
         *･゜ﾟ･*:.｡..｡.:*･'v(*ﾟ▽ﾟ*)v'･*:.｡. .｡.:*･゜ﾟ･*`;
     }else{
         displayArea.innerText = `${seconds}秒でした！
-        (*>ω<)惜しい！ `;
+        (*>ω<)おしい！ `;
     }
-  document.body.onclick = null;
+  document.body.onkeydown = null;
 }
 if(confirm('OKを押して10秒経ったと思ったら何かキーを押してください。')){
 　　　　　//confirm関数は、戻り値が意味を持ち、OKを押されるとtrue、キャンセルが押されると
